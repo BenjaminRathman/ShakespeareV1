@@ -25,14 +25,6 @@
       font-size: 2.5em; /* Making the text larger */
     }
 
-    .controls {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-
     .story-container {
       width: 80%;
       max-width: 800px;
@@ -51,6 +43,7 @@
       margin: 20px auto;
       display: flex;
       gap: 10px;
+      align-items: center;
     }
 
     input[type="text"] {
@@ -92,16 +85,18 @@
       white-space: pre-wrap;
       line-height: 1.5;
     }
+
+    .claude-response {
+      margin-left: 20px;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to Shakespeare</h1>
-  <div class="controls">
-    <button onclick="startStory()">Start New Story</button>
-  </div>
+  <h1>Shakespeare Story Developer</h1>
   
   <div class="story-container">
-    <div id="storyOutput" class="story-text"></div>
+    <div id="storyOutput" class="story-text">Welcome! Please describe the setting for your story.</div>
   </div>
 
   <div class="input-container">
@@ -112,12 +107,9 @@
   <script>
     let isStoryStarted = false;
 
-    async function startStory() {
+    // Initialize story when page loads
+    window.onload = async function() {
       try {
-        const button = document.querySelector('.controls button');
-        button.disabled = true;
-        document.getElementById('storyOutput').textContent = 'Starting story...';
-        
         const response = await fetch('http://localhost:5000/start-story', {
           method: 'POST',
           headers: {
@@ -127,7 +119,6 @@
         
         const data = await response.json();
         if (data.success) {
-          document.getElementById('storyOutput').textContent = data.message;
           isStoryStarted = true;
           document.getElementById('userInput').focus();
         } else {
@@ -135,19 +126,20 @@
         }
       } catch (error) {
         document.getElementById('storyOutput').textContent = 'Error: ' + error.message;
-      } finally {
-        button.disabled = false;
       }
-    }
+    };
 
     async function continueStory() {
       if (!isStoryStarted) {
-        alert('Please start a story first!');
+        alert('Please wait while the story initializes...');
         return;
       }
 
       const userInput = document.getElementById('userInput').value.trim();
       if (!userInput) return;
+
+      // Clear the input immediately after getting the value
+      document.getElementById('userInput').value = '';
 
       const sendButton = document.querySelector('.input-container button');
       try {
@@ -169,7 +161,7 @@
         
         const data = await response.json();
         if (data.success) {
-          storyOutput.textContent += '\n\n      ' + data.message;
+          storyOutput.textContent += '\n\n     ' + data.message;
           // Scroll to bottom
           storyOutput.scrollTop = storyOutput.scrollHeight;
         } else {
@@ -178,14 +170,14 @@
       } catch (error) {
         document.getElementById('storyOutput').textContent += '\n\nError: ' + error.message;
       } finally {
-        document.getElementById('userInput').value = '';
         sendButton.disabled = false;
         document.getElementById('userInput').focus();
       }
     }
 
     function handleKeyPress(event) {
-      if (event.key === 'Enter') {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault(); // Prevent default Enter behavior
         continueStory();
       }
     }

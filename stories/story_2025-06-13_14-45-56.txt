@@ -1,0 +1,21 @@
+Story Session Started: 2025-06-13_14-45-56
+==================================================
+
+
+
+Minecraft
+
+
+
+You wake to the sound of birdsong and the rustling of leaves. As you open your eyes, you find yourself in a blocky, pixelated world filled with vibrant colors and strange creatures. The sun shines brightly overhead, casting sharp-edged shadows across the grassy landscape.
+
+Rising to your feet, you take in your surroundings. Rolling hills stretch out before you, dotted with trees, flowers, and grazing sheep. In the distance, you spot towering mountains and a glimmering lake. The air is crisp and clean, carrying the faint scent of earth and greenery. 
+
+You realize you have no memory of how you arrived in this peculiar realm. Your pockets are empty, save for your bare hands. A profound sense of curiosity and a hint of unease wash over you as you ponder your first steps in this vast, unknown world.
+
+What do you do?
+
+- Start punching a tree to gather wood
+- Explore the area and look for signs of civilization 
+- Dig into the dirt to see what lies beneath
+
