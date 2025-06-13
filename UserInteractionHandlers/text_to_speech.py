@@ -12,7 +12,7 @@ class TextToSpeech:
         self.engine.setProperty('voice', self.voices[0].id)
         
         # Set default rate (speed)
-        self.engine.setProperty('rate', 150)  # Default is 200
+        self.engine.setProperty('rate', 220)  # Default is 200
         
     def list_voices(self):
         """List all available voices"""
@@ -36,46 +36,13 @@ class TextToSpeech:
     def speak(self, text):
         """Convert text to speech"""
         try:
-            print("\nSpeaking...")
+            
             self.engine.say(text)
             self.engine.runAndWait()
-            print("Done speaking!")
+            
         except Exception as e:
             print(f"Error during speech: {e}")
 
-def main():
-    tts = TextToSpeech()
-    
-    print("Welcome to Text-to-Speech!")
-    print("Type 'quit' to exit")
-    print("Type 'voices' to list available voices")
-    print("Type 'voice X' to set voice (where X is the voice number)")
-    print("Type 'rate X' to set speaking rate (where X is words per minute)")
-    
-    while True:
-        print("\nEnter text to speak (or a command):")
-        text = input("> ")
-        
-        if text.lower() == 'quit':
-            break
-        elif text.lower() == 'voices':
-            tts.list_voices()
-        elif text.lower().startswith('voice '):
-            try:
-                voice_index = int(text.split()[1])
-                tts.set_voice(voice_index)
-            except:
-                print("Invalid voice number")
-        elif text.lower().startswith('rate '):
-            try:
-                rate = int(text.split()[1])
-                tts.set_rate(rate)
-            except:
-                print("Invalid rate number")
-        else:
-            tts.speak(text)
-    
-    print("Goodbye!")
+tts = TextToSpeech()
+tts.speak("Enter text to speak:")
 
-if __name__ == "__main__":
-    main() 

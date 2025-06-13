@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shakespeare Web Application</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-image: url('user_interface_files/images/orange-Presentation-Gradient-Background.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 5vh;
+      transform: translateY(-50%);
+      color: white; /* Making text white for better visibility */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding shadow for better readability */
+      font-size: 2.5em; /* Making the text larger */
+    }
+
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    select {
+      padding: 10px 20px;
+      font-size: 1.1em;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      min-width: 200px;
+    }
+
+    select option {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #result {
+      margin-top: 20px;
+      color: white;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Shakespeare</h1>
+  <div class="controls">
+    <select id="storyType">
+      <option value="claude">Claude Interface</option>
+      <option value="api">API Connection</option>
+    </select>
+    <button onclick="startStory()">Start Story</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    async function startStory() {
+      try {
+        const button = document.querySelector('button');
+        const select = document.getElementById('storyType');
+        button.disabled = true;
+        document.getElementById('result').textContent = 'Starting story...';
+        
+        const response = await fetch('http://localhost:5000/start-story', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            storyType: select.value
+          })
+        });
+        
+        const data = await response.json();
+        document.getElementById('result').textContent = data.message;
+      } catch (error) {
+        document.getElementById('result').textContent = 'Error: ' + error.message;
+      } finally {
+        button.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>
