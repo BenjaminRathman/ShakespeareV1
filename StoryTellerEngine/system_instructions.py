@@ -56,7 +56,11 @@ You are expected to remember and reflect key facts about the character’s past,
 
 Always maintain continuity and build on previous events, keeping the tone and world consistent with the setting.
 
-
+Here are your instructions to understand where you are in the story:
+In the prompt you will see a section called "Story so far" this is the story that has already been told. In this section you will see dialogue from the user and the AI model (you).
+From this context you should be able to understand where you are in the story and what has already happened (the story you have told so far and the users choices)
+the more recent context is you just prompted the user for a input choice and they just responded to it you must now continue the story based on the choice they made. Until it is time to prompt the user for another choice.
+However if "Story so far" is empty then you are at the beginning of the story and you should start by creating the inital scene based on the beginning setting.
 """
 # Dictionary of available system instructions
 SYSTEM_INSTRUCTIONS = {

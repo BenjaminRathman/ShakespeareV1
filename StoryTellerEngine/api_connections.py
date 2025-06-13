@@ -39,12 +39,3 @@ class ClaudeAPI:
             print(f"Error getting response from Claude: {e}")
             return None
 
-# Example usage
-if __name__ == "__main__":
-    try:
-        claude = ClaudeAPI()
-        response = claude.get_response("Hello, how are you?")
-        if response:
-            print("Claude's response:", response)
-    except Exception as e:
-        print(f"Error: {e}") 
