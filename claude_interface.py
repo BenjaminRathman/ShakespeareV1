@@ -1,5 +1,12 @@
 from api_connections import ClaudeAPI
 
+# ===== SYSTEM INSTRUCTIONS =====
+# Edit the system_instruction variable below to change how Claude responds
+# Example: "You are a Shakespeare expert. Provide detailed analysis of his works."
+# Example: "You are a coding assistant. Provide clear, well-commented code examples."
+system_instruction = "You are a helpful AI assistant. Provide clear and concise responses."
+# ==============================
+
 def get_claude_response():
     """
     Get a response from Claude based on user input
@@ -20,7 +27,8 @@ def get_claude_response():
             
             # Get response from Claude
             print("\nGetting response from Claude...")
-            response = claude.get_response(prompt)
+            full_prompt = f"{system_instruction}\n\nUser: {prompt}"
+            response = claude.get_response(full_prompt)
             
             if response:
                 print("\nClaude's response:")
