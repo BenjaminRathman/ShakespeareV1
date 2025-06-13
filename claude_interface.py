@@ -1,10 +1,11 @@
 from api_connections import ClaudeAPI
+import system_instructions
 
 # ===== SYSTEM INSTRUCTIONS =====
 # Edit the system_instruction variable below to change how Claude responds
 # Example: "You are a Shakespeare expert. Provide detailed analysis of his works."
 # Example: "You are a coding assistant. Provide clear, well-commented code examples."
-system_instruction = "You are a helpful AI assistant. Provide clear and concise responses."
+system_instruction = system_instructions.get_system_instruction()
 # ==============================
 
 def get_claude_response():
