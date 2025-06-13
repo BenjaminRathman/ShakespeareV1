@@ -1,0 +1,35 @@
+Story Session Started: 2025-06-13_15-04-53
+==================================================
+
+
+
+I am a knight in france about to go and fight the english
+
+
+
+You stand tall in your gleaming armor, the fleur-de-lis emblazoned proudly on your surcoat. The early morning sun casts long shadows across the bustling courtyard of the castle as you make your final preparations for battle. Squires scurry about, ensuring your sword is sharp, your shield sturdy, and your destrier well-fed and ready for the long march ahead.
+
+Word has come from the north that English forces have landed on the shores of Normandy, seeking to claim the French throne for their own king. As a loyal knight in service to King Charles VII, you have sworn an oath to defend the rightful ruler of France and drive out the invaders at any cost.
+
+Your fellow knights gather around you, their faces grim yet determined. The clatter of metal rings out as they mount their steeds and form up into neat columns, the banners of their noble houses fluttering in the breeze. The time has come to ride out and meet the English on the field of battle.
+
+- Mount your warhorse and ride at the head of your troops towards Normandy.
+- Seek out the local peasants to gather intelligence about the English army's movements.
+- Pray at the castle's chapel for God's favor and protection in the coming fight.
+
+
+
+I mount my warhorse
+
+
+
+You swing yourself up into the saddle of your mighty destrier, the warhorse snorting and pawing at the ground eagerly. The rest of your troops follow suit, mounted knights and men-at-arms forming up behind you in disciplined ranks. With a nod to your standard-bearer, you spur your horse forward and lead the column out through the castle gates.
+
+The countryside rolls by as you ride north towards Normandy, the clop of hooves and jangle of harness filling the air. Passing through villages and farms, you see the common folk pause in their daily labors to watch your company ride by, their faces filled with a mix of hope, fear and awe. Some cheer and wave as you pass, while others make the sign of the cross and whisper prayers for your victory.
+
+After many long hours in the saddle, you crest a hill and finally lay eyes on the English encampment sprawling out below, the colorful pavilions of the enemy nobles standing out starkly amidst a sea of common tents. You raise a mailed fist, bringing your troops to a halt as you consider your approach.
+
+- Order your troops to establish a fortified camp on the hill, then send scouts to reconnoiter the enemy positions.
+- Sound the trumpets and lead an immediate full cavalry charge against the English lines, hoping to catch them by surprise.
+- Dispatch messengers to other nearby French forces, seeking to rally reinforcements before attacking the English.
+
