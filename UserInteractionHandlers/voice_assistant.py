@@ -1,6 +1,6 @@
-from speech_handler import SpeechHandler
-from api_connections import ClaudeAPI
-from text_to_speech import TextToSpeech
+from UserInteractionHandlers.speech_handler import SpeechHandler
+from StoryTellerEngine.api_connections import ClaudeAPI
+from UserInteractionHandlers.text_to_speech import TextToSpeech
 
 class VoiceAssistant:
     def __init__(self):

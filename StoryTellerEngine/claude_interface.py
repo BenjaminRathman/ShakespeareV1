@@ -1,5 +1,5 @@
-from api_connections import ClaudeAPI
-import system_instructions
+from StoryTellerEngine.api_connections import ClaudeAPI
+import StoryTellerEngine.system_instructions as system_instructions
 
 # ===== SYSTEM INSTRUCTIONS =====
 # Edit the system_instruction variable below to change how Claude responds
@@ -41,9 +41,3 @@ def get_claude_response():
                 
     except Exception as e:
         print(f"An error occurred: {e}")
-
-if __name__ == "__main__":
-    print("Welcome to the Claude Interface!")
-    print("Type your prompt and press Enter to get a response from Claude.")
-    print("Type 'quit' to exit.")
-    get_claude_response() 

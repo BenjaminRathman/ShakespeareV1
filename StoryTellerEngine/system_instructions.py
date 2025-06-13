@@ -75,5 +75,3 @@ def get_system_instruction():
     """
     return SYSTEM_INSTRUCTIONS["old"] 
 
-
-print(get_system_instruction())
