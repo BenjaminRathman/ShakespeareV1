@@ -14,6 +14,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-family: Arial, sans-serif;
     }
     
     h1 {
@@ -58,6 +59,7 @@
 
     input[type="text"]::placeholder {
       color: rgba(255, 255, 255, 0.7);
+      font-style: italic;
     }
 
     button {
@@ -142,12 +144,18 @@
       document.getElementById('userInput').value = '';
 
       const sendButton = document.querySelector('.input-container button');
+      const inputBox = document.getElementById('userInput');
+      const storyOutput = document.getElementById('storyOutput');
+      
       try {
+        // Disable both the button and input box
         sendButton.disabled = true;
+        inputBox.disabled = true;
+        inputBox.placeholder = 'Generating Response...';
         
-        // Add user input to the story output
-        const storyOutput = document.getElementById('storyOutput');
+        // Add user input to the story output and scroll to bottom
         storyOutput.textContent += '\n\nYou: ' + userInput;
+        storyOutput.scrollTop = storyOutput.scrollHeight;
         
         const response = await fetch('http://localhost:5000/continue-story', {
           method: 'POST',
@@ -162,16 +170,21 @@
         const data = await response.json();
         if (data.success) {
           storyOutput.textContent += '\n\n     ' + data.message;
-          // Scroll to bottom
+          // Scroll to bottom after adding response
           storyOutput.scrollTop = storyOutput.scrollHeight;
         } else {
           storyOutput.textContent += '\n\nError: ' + data.message;
+          storyOutput.scrollTop = storyOutput.scrollHeight;
         }
       } catch (error) {
-        document.getElementById('storyOutput').textContent += '\n\nError: ' + error.message;
+        storyOutput.textContent += '\n\nError: ' + error.message;
+        storyOutput.scrollTop = storyOutput.scrollHeight;
       } finally {
+        // Re-enable both the button and input box
         sendButton.disabled = false;
-        document.getElementById('userInput').focus();
+        inputBox.disabled = false;
+        inputBox.placeholder = 'Type your story input here...';
+        inputBox.focus();
       }
     }
 

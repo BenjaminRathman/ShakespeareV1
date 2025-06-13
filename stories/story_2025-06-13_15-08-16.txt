@@ -1,0 +1,21 @@
+Story Session Started: 2025-06-13_15-08-16
+==================================================
+
+
+
+Minecraft
+
+
+
+You find yourself in the blocky, pixelated world of Minecraft. The sun hangs high in the square sky, casting sharp-edged shadows across the vibrant green grass and sturdy oak trees that dot the landscape. The air is filled with the gentle sounds of rustling leaves, distant animal calls, and your own footsteps as you stand upon the newly-generated terrain.
+
+You check your inventory, but find it empty. No tools, no weapons, no shelter - just the clothes on your back and the vast, untamed wilderness before you. The day is still young, but you know that once the square sun sets, monsters will emerge from the shadows. You'll need to gather resources and craft some basic tools and shelter before night falls.
+
+Looking around, you spot a cluster of trees nearby, along with the telltale grey and brown blocks of stone and dirt. There's no time to waste.
+
+What do you do?
+
+- Punch a tree to gather some wood blocks
+- Dig into the dirt to start a makeshift shelter
+- Explore the immediate area for other resources
+

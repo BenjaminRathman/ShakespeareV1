@@ -1,0 +1,61 @@
+Story Session Started: 2025-06-13_15-02-03
+==================================================
+
+
+
+cave
+
+
+
+You find yourself in a dark, damp cave. The air is thick with the musty smell of earth and stagnant water. You can hear the distant sound of dripping echoing through the rocky chambers. The only light comes from the faint glow of bioluminescent moss clinging to the cavern walls, casting an eerie green hue.
+
+As your eyes adjust to the dim light, you notice that the cave splits off into two passages. The one on the left seems to slope downward, disappearing into inky blackness. The passage on the right appears to wind upwards, and you can feel a faint breeze carrying the scent of fresh air from that direction.
+
+You take stock of your meager supplies - a small knife, a length of rope, and a waterproof backpack containing a flashlight, some rations, and a basic first aid kit. You'll have to rely on your wits and resourcefulness to survive this subterranean labyrinth.
+
+What do you do?
+
+- Descend deeper into the cave via the left passage 
+- Climb upwards through the passage on the right
+- Search the area for any other useful items or clues
+
+
+
+go upwards
+
+
+
+You decide to follow the passage leading upwards, hoping it will take you closer to the surface and fresh air. The breeze grows stronger as you climb, spurring you onward. The tunnel twists and turns, forcing you to scramble over boulders and squeeze through narrow crevices. 
+
+After several minutes of challenging ascent, you emerge into a larger cavern. Rays of sunlight filter down from a ragged opening high above, illuminating a scene that makes your breath catch in your throat.
+
+Spread out before you are the ruins of what appears to be an ancient underground city. Crumbling stone buildings, ornately carved pillars, and the remains of cobblestone streets cover the cavern floor. Everywhere you look, bioluminescent plants and strange, glowing fungi cling to the structures, casting a mesmerizing array of colors across the cave.
+
+In the center of the ruins stands a towering stone pyramid. A grand staircase leads up to an intricately engraved doorway at its peak. The city is hauntingly silent, but you can't shake the feeling that you're being watched.
+
+What do you do?
+
+- Explore the ruined city and search the buildings
+- Climb the pyramid stairs to investigate the doorway
+- Shout out a greeting to see if anyone (or anything) replies
+
+
+
+explore ruined city
+
+
+
+You decide to explore the enigmatic ruins, eager to uncover the secrets of this long-forgotten underground city. Moving cautiously through the ancient streets, you marvel at the architectural craftsmanship that has endured untold ages in this hidden realm.
+
+As you approach one of the larger structures near the city center, you notice that its stone door is slightly ajar. Mustering your courage, you push it open with a low creak and step inside. Dimly glowing fungi provide just enough light to reveal a dusty interior filled with rotting wooden furniture and strange, corroded metal devices. Ragged tapestries hang from the walls, their once-vibrant colors faded to muted shades.
+
+In the corner, a glint of something shiny catches your eye. Brushing away a layer of dust and cobwebs, you discover a small, ornate metal box. Inside, you find a peculiar crystalline orb that pulses softly with an inner light, and an aged scrap of parchment covered in cryptic symbols. You tuck these intriguing items into your pack for later examination.
+
+Suddenly, a low rumble reverberates through the city, and small pebbles skitter across the floor. The sound grows louder, and you realize it's coming from the direction of the pyramid. A sense of urgency grips you.
+
+What do you do?
+
+- Rush outside to see what's happening at the pyramid
+- Search the building more thoroughly for additional clues or artifacts
+- Attempt to decipher the symbols on the parchment
+
