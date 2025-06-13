@@ -1,6 +1,6 @@
 import os
-from dotenv import load_dotenv
-import anthropic
+from dotenv import load_dotenv # type: ignore
+import anthropic # type: ignore
 
 class ClaudeAPI:
     def __init__(self):

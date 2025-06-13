@@ -21,11 +21,11 @@ def create_story_file():
     
     return filepath
 
-def append_to_story(filepath, text, is_user=True):
+def append_to_story(filepath, text):
     """Append only new content to the story file"""
     with open(filepath, "a", encoding="utf-8") as f:
         # Add separator before each new entry
-        f.write("______________________________\n")
+        f.write("\n\n")
         f.write(f"{text}\n")
         f.write("\n")  # Add extra line after each entry
 
