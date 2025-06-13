@@ -1,0 +1,21 @@
+Story Session Started: 2025-06-13_14-15-37
+==================================================
+
+
+
+Star Wars
+
+
+
+You are a young Jedi Padawan, training under Master Obi-Wan Kenobi in the Jedi Temple on Coruscant. The bustling city-planet is the heart of the Galactic Republic, but tensions are high as the threat of the Separatist movement looms large. 
+
+As you meditate in the serene Temple gardens, focusing on the living Force that flows through all things, a sudden disturbance ripples through your consciousness. You sense fear, anger, and a growing darkness in the galaxy. Opening your eyes, you see Obi-Wan approaching with a worried expression.
+
+"I'm afraid the Separatist crisis has escalated," he says gravely. "Count Dooku's forces have launched a surprise attack on several Republic worlds. The Jedi Council is dispatching teams to protect key systems and uncover Dooku's plans."
+
+Obi-Wan regards you thoughtfully. "The Council feels you are ready for your first mission, young Padawan. How do you wish to serve the Republic in this dangerous time?"
+
+- Volunteer to join a strike team engaging Separatist forces directly
+- Accompany a diplomatic envoy to negotiate a peaceful resolution 
+- Investigate Republic intelligence reports to uncover Dooku's true motives
+

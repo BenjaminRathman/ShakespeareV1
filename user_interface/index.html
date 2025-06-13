@@ -33,20 +33,38 @@
       gap: 15px;
     }
 
-    select {
-      padding: 10px 20px;
+    .story-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .input-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
       font-size: 1.1em;
       background-color: rgba(255, 255, 255, 0.2);
       color: white;
       border: 2px solid white;
       border-radius: 5px;
-      cursor: pointer;
-      min-width: 200px;
     }
 
-    select option {
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
+    input[type="text"]::placeholder {
+      color: rgba(255, 255, 255, 0.7);
     }
 
     button {
@@ -70,51 +88,105 @@
       cursor: not-allowed;
     }
 
-    #result {
-      margin-top: 20px;
-      color: white;
-      font-size: 1.2em;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      text-align: center;
-      max-width: 80%;
+    .story-text {
+      white-space: pre-wrap;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to Shakespeare</h1>
   <div class="controls">
-    <select id="storyType">
-      <option value="claude">Claude Interface</option>
-      <option value="api">API Connection</option>
-    </select>
-    <button onclick="startStory()">Start Story</button>
+    <button onclick="startStory()">Start New Story</button>
   </div>
-  <div id="result"></div>
+  
+  <div class="story-container">
+    <div id="storyOutput" class="story-text"></div>
+  </div>
+
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Type your story input here..." onkeypress="handleKeyPress(event)">
+    <button onclick="continueStory()">Send</button>
+  </div>
 
   <script>
+    let isStoryStarted = false;
+
     async function startStory() {
       try {
-        const button = document.querySelector('button');
-        const select = document.getElementById('storyType');
+        const button = document.querySelector('.controls button');
         button.disabled = true;
-        document.getElementById('result').textContent = 'Starting story...';
+        document.getElementById('storyOutput').textContent = 'Starting story...';
         
         const response = await fetch('http://localhost:5000/start-story', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+          }
+        });
+        
+        const data = await response.json();
+        if (data.success) {
+          document.getElementById('storyOutput').textContent = data.message;
+          isStoryStarted = true;
+          document.getElementById('userInput').focus();
+        } else {
+          document.getElementById('storyOutput').textContent = 'Error: ' + data.message;
+        }
+      } catch (error) {
+        document.getElementById('storyOutput').textContent = 'Error: ' + error.message;
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    async function continueStory() {
+      if (!isStoryStarted) {
+        alert('Please start a story first!');
+        return;
+      }
+
+      const userInput = document.getElementById('userInput').value.trim();
+      if (!userInput) return;
+
+      const sendButton = document.querySelector('.input-container button');
+      try {
+        sendButton.disabled = true;
+        
+        // Add user input to the story output
+        const storyOutput = document.getElementById('storyOutput');
+        storyOutput.textContent += '\n\nYou: ' + userInput;
+        
+        const response = await fetch('http://localhost:5000/continue-story', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            storyType: select.value
+            input: userInput
           })
         });
         
         const data = await response.json();
-        document.getElementById('result').textContent = data.message;
+        if (data.success) {
+          storyOutput.textContent += '\n\n      ' + data.message;
+          // Scroll to bottom
+          storyOutput.scrollTop = storyOutput.scrollHeight;
+        } else {
+          storyOutput.textContent += '\n\nError: ' + data.message;
+        }
       } catch (error) {
-        document.getElementById('result').textContent = 'Error: ' + error.message;
+        document.getElementById('storyOutput').textContent += '\n\nError: ' + error.message;
       } finally {
-        button.disabled = false;
+        document.getElementById('userInput').value = '';
+        sendButton.disabled = false;
+        document.getElementById('userInput').focus();
+      }
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        continueStory();
       }
     }
   </script>

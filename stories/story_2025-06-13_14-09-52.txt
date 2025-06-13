@@ -1,0 +1,20 @@
+Story Session Started: 2025-06-13_14-09-52
+==================================================
+
+
+
+Here is the starting setting for our interactive story:
+
+The year is 2145. Climate change has ravaged the planet, leading to rising sea levels, extreme weather, and resource scarcity. Most of humanity now lives in a handful of overcrowded megacities. 
+
+You live in the towering metropolis of New Angeles, a neon-soaked urban sprawl built upon the ruins of Los Angeles. The wealthy elite inhabit the upper levels while the poor are crammed into the lower city—a labyrinth of alleyways, street markets and tenements.
+
+As a lowly courier in the Neon District, you spend your days weaving through crowds on your hoverbike, delivering messages and black market goods. The work is dangerous but the pay keeps you off the streets. Augmentations and cybernetic enhancements are common in your line of work. 
+
+Tonight, a mysterious client has offered you a job. The pay is suspiciously high for a routine delivery. As you arrive at the pickup location, an abandoned warehouse down by the old harbor, you feel the hairs on your neck stand up. Something doesn't feel right.
+
+Your choices:
+- Go inside the warehouse to retrieve the package as instructed
+- Scout around the outside of the building to look for signs of danger
+- Message your client that you have a bad feeling and are aborting the job
+
