@@ -30,8 +30,11 @@ class VoiceAssistant:
                 
                 # Get response from Claude
                 print("Getting response from Claude...")
-                full_prompt = f"{self.system_instruction}\n\nUser: {text}"
-                response = self.claude.get_response(full_prompt)
+                response = self.claude.get_response(
+                    system_instruction=self.system_instruction,
+                    story_context="",  # No story context for voice mode
+                    user_input=text
+                )
                 
                 if response:
                     print(f"Claude's response: {response}")

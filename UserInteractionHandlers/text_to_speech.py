@@ -43,6 +43,8 @@ class TextToSpeech:
         except Exception as e:
             print(f"Error during speech: {e}")
 
-tts = TextToSpeech()
-tts.speak("Enter text to speak:")
+# Example usage (only runs when file is executed directly)
+if __name__ == "__main__":
+    tts = TextToSpeech()
+    tts.speak("Enter text to speak:")
 
